@@ -1,6 +1,252 @@
-<p>Otwarcia szachowe <br />
-Otwarcia szachowe to początkowe ruchy partii szachowej, które mają na celu kontrolowanie centrum, rozwinięcie figur oraz zabezpieczenie króla. Istnieje niezliczona ilość otwarć, z których każde ma swoje unikalne cechy i strategie. Poznanie podstawowych otwarć oraz ich zasad pozwoli Ci lepiej zrozumieć dynamikę gry i podejmować trafne decyzje na szachownicy.<br />
-Gdybym kazał Magnusowi Carlsenowi zastosować moje autorskie otwarcie, wyglądałoby to tak.<br />
-<img src="/image.jpg" width="640" height="360" /><br />
-<a href="/list.html">lista otwarć</a></p>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
 
+<style>
+	.container {
+		display: grid;
+		grid-template-columns: 1fr 3fr;
+		grid-template-rows: auto 1fr auto;
+		grid-template-areas: 
+			"header header"
+			"sidebar main"
+			"footer footer";
+	}
+	.header {
+		grid-area: header;
+	}
+	.sidebar {
+		grid-area: sidebar;
+	}
+	.main {
+		grid-area: main;
+	}
+	.footer {
+		grid-area: footer;
+	}
+</style>
+
+<body class="text-blue-500 bg-slate-100 flex flex-col">
+	
+	<div class="container">
+
+		<div class="header">
+			
+			
+			<div class="p-12 flex">
+				<h1 class="text-6xl inline-block shadow-xl">Blog szachowy</h1>
+			</div>
+			
+		</div>	
+			
+		<div class="sidebar">
+			<nav class="text-red-500">
+				<ul>
+					<li><a href="/index.html" class="font-bold">
+						Strona główna
+					</a></li>
+					<li><a href="/otwarcia.html">
+						Otwarcia szachowe
+					</a></li>
+					<li><a href="/formularz.html">
+						Formularz
+					</a></li>
+				</ul>
+			</nav>
+		</div>
+
+		<div class="main">
+			<article>
+				<map name="szachownica">
+					<!-- Piony -->
+					<area
+					shape="rect" 
+					coords="0,90,720,180" 
+					href="#"
+					onclick="redirectToPage(pion)"/>
+					<area
+					shape="rect"
+					coords="0,540,720,630"
+					href="#"
+					onclick="redirectToPage(pion)"/>
+
+					<!-- Wieże -->
+					<area
+					shape="rect" 
+					coords="0,0,90,90" 
+					href="#"
+					onclick="redirectToPage(wieza);"/>
+					<area
+					shape="rect"
+					coords="630,0,720,90"
+					href="#"
+					onclick="redirectToPage(wieza);"/>
+					<area
+					shape="rect" 
+					coords="0,630,90,720" 
+					href="#"
+					onclick="redirectToPage(wieza);"/>
+					<area
+					shape="rect"
+					coords="630,630,720,720"
+					href="#"
+					onclick="redirectToPage(wieza);"/>
+
+					<!-- Skoczki -->
+					<area
+					shape="rect" 
+					coords="90,0,180,90" 
+					href="#"
+					onclick="redirectToPage(skoczek);"/>
+					<area
+					shape="rect"
+					coords="540,0,630,90"
+					href="#"
+					onclick="redirectToPage(skoczek);"/>
+					<area
+					shape="rect" 
+					coords="90,630,180,720" 
+					href="#"
+					onclick="redirectToPage(skoczek);"/>
+					<area
+					shape="rect"
+					coords="540,630,630,720"
+					href="#"
+					onclick="redirectToPage(skoczek);"/>
+
+					<!-- Gońce -->
+					<area
+					shape="rect" 
+					coords="180,0,270,90" 
+					href="#"
+					onclick="redirectToPage(goniec);"/>
+					<area
+					shape="rect"
+					coords="450,0,540,90"
+					href="#"
+					onclick="redirectToPage(goniec);"/>
+					<area
+					shape="rect" 
+					coords="180,630,270,720" 
+					href="#"
+					onclick="redirectToPage(goniec);"/>
+					<area
+					shape="rect"
+					coords="450,630,540,720"
+					href="#"
+					onclick="redirectToPage(goniec);"/>
+
+					<!-- Hetmany -->
+
+					<area
+					shape="rect" 
+					coords="270,0,360,90" 
+					href="#"
+					onclick="redirectToPage(hetman);"/>
+					<area
+					shape="rect" 
+					coords="270,630,360,720" 
+					href="#"
+					onclick="redirectToPage(hetman);"/>
+
+					<!-- Króle -->
+
+					<area
+					shape="rect" 
+					coords="360,0,450,90" 
+					href="#"
+					onclick="redirectToPage(krol);"/>
+					<area
+					shape="rect" 
+					coords="360,630,450,720" 
+					href="#"
+					onclick="redirectToPage(krol);"/>
+
+				</map>
+				<img usemap="#szachownica" src="chess_board.jpg" alt="Szachownica" usemap="#szachownica" class="m-12 shadow-xl">
+			</article>
+
+			<article class="p-12">
+				<h2 class="text-xl">
+					<div class="font-bold">
+						Wyniki mistrzostw świata w szachach szybkich (28.12.2023)
+					</div>
+				</h2>
+				<div class="relative inline-block">
+					<details>
+						<summary class="relative z-10 text-orange-500">
+							<div class="absolute inset-0 bg-orange-100 animate-ping rounded-lg"></div>
+							Kliknij aby zobaczyć wyniki
+						</summary>
+						
+						<ol class="list-roman">
+							<li>
+								Magnus Carlsen
+							</li>
+							<li>
+								Vladimir Fedoseev
+							</li>
+							<li>
+								Yu Yangyi		
+							</li>
+							<li>
+								Vidit Santosh Gujrathi
+							</li>
+							<li>
+								Volodar Murzin
+							</li>
+							<li>
+								Maxime Vachier-Lagrave
+							</li>
+							<li>
+								Daniil Dubov
+							</li>
+							<li>
+								Praggnanandhaa Rameshbabu
+							</li>
+						</ol>
+					</details>
+				</div>
+				
+			</article>
+
+			<p>Postęp zadania: <progress id="taskProgress" value="50" max="100"></progress></p>
+
+			<div class="flex flex=row">
+				<svg height="200" width="300" class="fill-yellow-400 stroke-black stroke-2"
+			stroke-linejoin="round">
+				<polygon points="75,0 125,125 0,50 150,50, 25 125" fill/>
+			</svg> 
+			</div>
+		</div>
+
+		<div class="footer">
+			2024 Blog szachowy.
+		</div>
+	</div>
+
+
+	<script>
+		// Zdefiniuj stałą dla docelowej strony
+		const pion = 'https://pl.wikipedia.org/wiki/Pion_(szachy)';
+		const wieza = 'https://pl.wikipedia.org/wiki/Wie%C5%BCa_(szachy)';
+		const skoczek = 'https://pl.wikipedia.org/wiki/Skoczek_(szachy)';
+		const goniec = 'https://pl.wikipedia.org/wiki/Goniec_(szachy)'
+		const hetman = 'https://pl.wikipedia.org/wiki/Hetman_(szachy)';
+		const krol = 'https://pl.wikipedia.org/wiki/Kr%C3%B3l_(szachy)'
+		
+		// Funkcja przekierowująca na docelową stronę
+		function redirectToPage(targetPage) {
+			window.open(targetPage, '_blank')
+		}
+	</script>
+
+	
+  
+
+</body>
+</html>

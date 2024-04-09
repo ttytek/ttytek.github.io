@@ -1,0 +1,158 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="text-blue-500 bg-slate-200 flex flex-col">
+	<header>
+		<div>
+			<h1 class="text-6xl">Blog szachowy</h1>
+			<nav class="text-red-500">
+				<ul>
+					<li><a href="/index.html">
+						Strona główna
+					</a></li>
+					<li><a href="/otwarcia.html">
+						Otwarcia szachowe
+					</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>	
+
+
+	<article>
+		<h2 class="text-xl">
+			Otwarcia szachowe
+		</h2><p>
+		Otwarcia szachowe to początkowe ruchy partii szachowej, które mają na celu kontrolowanie centrum, rozwinięcie figur oraz zabezpieczenie króla. Istnieje niezliczona ilość otwarć, z których każde ma swoje unikalne cechy i strategie. Poznanie podstawowych otwarć oraz ich zasad pozwoli Ci lepiej zrozumieć dynamikę gry i podejmować trafne decyzje na szachownicy.<br />
+		</p>
+		<strong>
+			Gdybym kazał Magnusowi Carlsenowi zastosować moje autorskie otwarcie, wyglądałoby to tak.</p><br />
+		</strong>
+			<img src="/image.jpg" width="640" height="360" /><br>
+		<h3><a href="/list.html" class="text-red-500">
+			Lista otwarć
+		</a></h3>
+		<div class="w-full max-w-2x1 mx-auto">
+		<table class="text-black table-auto w-full">
+			<caption>
+				Wady i zalety wybranych otwarć szachowych
+			</caption>
+			<thead>
+				<tr>
+					<th>Otwarcie</th>
+					<th>Zalety</th>
+					<th>Wady</th>
+					<th>Ocena w skali 0-10</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Ruy Lopez (otwarcie hiszpańskie)</td>
+					<td> Zapewnia stabilne podstawy do rozwinięcia ataku na królewskie skrzydło.</td>
+					<td> Może wymagać dużego zapamiętania linii otwarć.</td>
+					<td> 7/10</td>
+				</tr>
+				<tr>
+					<td>Otwarcie Włoskie (Italian Game)</td>
+					<td> Oferuje białym zarówno bardzo agresywne ataki jak i wolniejsze rozegranie gry.</td>
+					<td> Często trudno jest utrzymać przewagę</td>
+					<td> 9/10</td>
+				</tr>
+				<tr>
+					<td>The Apocalypse Attack</td>
+					<td> Fajna nazwa</td>
+					<td> </td>
+					<td> 8/10</td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
+	</article>
+
+
+	<article>
+		<h3 class="text-xl">
+			Zgłoś o jakim otwarciu chciał(a)byś zobaczyć artykuł
+		</h3>
+		<div>
+			<button id="toggleOrientation">Zmień orientację</button>
+		</div>
+		<form action="" >
+			<div id="flexContainer" class="flex flex-col">
+				<div class="p-2 flex-auto">
+					<label for="name">
+						Imię:
+					</label>
+					<input type="text" id="name" name="name" required>
+				</div>
+
+				<div class="p-2 flex-auto">
+					<label for="type">
+						Typ artykułu
+					</label>
+
+					<select id="type" name="type" required>
+						<optgroup label="Wybierz typ artykułu">
+							<option value="Wybierz">
+								(Wybierz)
+							</option>
+							<option value="Game">
+								Omówienie przykładowej rozgrywki
+							</option>
+							<option value="pros and cons">
+								Mocne i słabe strony otwarcia
+							</option>
+						</optgroup>
+					</select>
+				</div>
+
+				<div class="p-2 flex-auto">
+					<label for="email">
+						Email:
+					</label>
+					<input type="email" id="email" name="email" required>
+				</div>
+
+				<div class="p-2 flex-auto">
+					<label for="message">
+						Nazwa otwarcia:
+					</label>
+					<textarea id="message" name="message" rows="2" required></textarea>
+				</div>
+
+				<div class="p-2 flex-none">
+					<button type="submit">
+						Wyślij
+					</button>
+				</div>
+			</div>
+		</form>
+	</article>
+
+	<footer>
+		2024 Blog szachowy.
+	</footer>
+
+
+	<script>
+		document.getElementById('toggleOrientation').addEventListener('click', function() {
+		const container = document.getElementById('flexContainer');
+	
+		// Sprawdza obecną klasę i przełącza ją
+		if (container.classList.contains('flex-col')) {
+			container.classList.remove('flex-col');
+			container.classList.add('flex-row');
+		} else {
+			container.classList.remove('flex-row');
+			container.classList.add('flex-col');
+		}
+		});
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+{
+  "name": "strona",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "tailwindcss build -i tailwind/styles.css -o ./styles.css",
+    "build-css-mini": "tailwindcss build -i tailwind/styles.css -o ./styles.css --minify",
+    "minify-css": "postcss src/css/*.css -o dist/css/style.min.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ttytek/ttytek.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ttytek/ttytek.github.io/issues"
+  },
+  "homepage": "https://github.com/ttytek/ttytek.github.io#readme",
+  "dependencies": {
+    "css": "^3.0.0",
+    "tailwind": "^4.0.0"
+  },
+  "devDependencies": {
+    "cssnano": "^6.1.2",
+    "postcss": "^8.4.38",
+    "postcss-cli": "^11.0.0",
+    "tailwindcss": "^3.4.1"
+  }
+}

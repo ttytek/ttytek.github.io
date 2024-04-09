@@ -45,13 +45,13 @@ first='Larsens'
 with open('list.md', 'w') as index:
     index.write(xd)
     for el in matches:
-        if(el<first):
-            print(f'skipped {el}')
-            continue
+        #if(el<first):
+        #    print(f'skipped {el}')
+        #    continue
         print(f'at {el}')
         subpage=el
         index.write(f'<span style="font-size:larger;">[{el}](/{subpage}.html)</span><br>\n')
-
+        continue
         with open(subpage+'.md', 'w') as sp:
             sp.write(xd)
             try:
